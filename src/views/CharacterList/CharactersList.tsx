@@ -11,11 +11,10 @@ export function CharactersList() {
     const [total, setTotal] = useState<number>(0);
     const [filterText, setFilterText] = useState<string>('');
     const url = "http://gateway.marvel.com/v1/public/characters"
-    const publicToken = '7a2679f25862bc03be7bd5e2b0b35edc'
-    const privateToken= 'a77e7e6a8f4d444ec4ef952f155318688eafbe6a'
+    
     const ts = new Date().getTime();
-    const hash = CryptoJs.MD5(ts+privateToken+publicToken)
-    const finalUrl = `${url}?ts=${ts}&apikey=${publicToken}&hash=${hash}`
+    const hash = CryptoJs.MD5(ts+import.meta.env.VITE_PRIVATE_TOKEN_MARVEL+import.meta.env.VITE_PUBLIC_TOKEN_MARVEL)
+    const finalUrl = `${url}?ts=${ts}&apikey=${import.meta.env.VITE_PUBLIC_TOKEN_MARVEL}&hash=${hash}`
     //TODO: PAGINACIÓN
    useEffect(() => {
       fetch(finalUrl)
@@ -30,7 +29,7 @@ export function CharactersList() {
          });
    }, [finalUrl]);
    //TODO: Hacer un fihcero literals
-   //       <input type='text' placeholder='Search a Character...' value={filterText} onChange={(e) => setFilterText(e.target.value)}/>
+
    const handleChangeInput = (text:string) => {
       setFilterText(text)
       setCharactersFiltered( characters.filter(character => (

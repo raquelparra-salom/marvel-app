@@ -13,12 +13,11 @@ export function ComicsCharacter() {
   const [character, setCharacter] = useState<Character>();
   const urlComics = `http://gateway.marvel.com/v1/public/characters/${characterId}/comics`
   const urlCharacter = `http://gateway.marvel.com/v1/public/characters/${characterId}`
-  const publicToken = '7a2679f25862bc03be7bd5e2b0b35edc'
-  const privateToken= 'a77e7e6a8f4d444ec4ef952f155318688eafbe6a'
+ 
   const ts = new Date().getTime();
-  const hash = CryptoJs.MD5(ts+privateToken+publicToken)
-  const finalUrl = `${urlComics}?ts=${ts}&apikey=${publicToken}&hash=${hash}`
-  const finalUrlCharacter = `${urlCharacter}?ts=${ts}&apikey=${publicToken}&hash=${hash}`
+  const hash = CryptoJs.MD5(ts+import.meta.env.PRIVATE_TOKEN_MARVEL+import.meta.env.APP_PUBLIC_TOKEN_MARVEL)
+  const finalUrl = `${urlComics}?ts=${ts}&apikey=${import.meta.env.PUBLIC_TOKEN_MARVEL}&hash=${hash}`
+  const finalUrlCharacter = `${urlCharacter}?ts=${ts}&apikey=${import.meta.env.PUBLIC_TOKEN_MARVEL}&hash=${hash}`
   //TODO: PAGINACIÓN
  useEffect(() => {
    fetch(finalUrl)
