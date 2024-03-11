@@ -1,0 +1,1 @@
+export { CharactersFavList } from './CharactersFavList'

@@ -1,0 +1,25 @@
+.wrapper {
+    background-color: black;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #333333;
+
+    img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .info {
+        color: white;
+        padding: 60px;
+        width: 40%;
+    }
+
+    .title {
+        text-transform: uppercase;
+    }
+
+    
+}

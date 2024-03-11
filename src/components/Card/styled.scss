@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+
+  a{
+    height: 194px;
+  }
+
+  img {
+    height: 189.97px;
+    border-bottom: 4px solid #EC1D24;
+    border-radius: 5px 5px 0 0; 
+    object-fit: cover; 
+    width: 100%;
+  }
+
+  .info {
+    padding: 16px 16px 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 56px;
+
+    .title {
+      width: 108px;
+      height: 16px;
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16.41px;
+      text-decoration: none; 
+    }
+  }
+}
