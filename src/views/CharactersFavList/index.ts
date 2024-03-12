@@ -1,1 +1,1 @@
-export { CharactersFavList } from './CharactersFavList'
+export { CharactersFavList } from './CharactersFavList';

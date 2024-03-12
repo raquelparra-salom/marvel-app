@@ -1,4 +1,4 @@
 export interface ErrorProps {
-    message: string;
-    statusText: string
+  message: string;
+  statusText: string;
 }

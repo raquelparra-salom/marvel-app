@@ -1,46 +1,41 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Root from './components/Layout/Layout'
-import './index.scss'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Root from './components/Root/Root';
+import './index.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage/ErrorPage';
-import {CharactersFavList} from './views/CharactersFavList';
-import {CharactersList} from './views/CharacterList';
-import {ComicsCharacter} from './views/ComicsCharacter';
+import { CharactersFavList } from './views/CharactersFavList';
+import { CharactersList } from './views/CharacterList';
+import { ComicsCharacter } from './views/ComicsCharacter';
 
-const  router  = createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <CharactersList />,
       },
       {
-        path: "/list",
+        path: '/list',
         element: <CharactersList />,
       },
       {
-        path: "/fav",
+        path: '/fav',
         element: <CharactersFavList />,
       },
       {
-        path: "/comics/:characterId",
+        path: '/comics/:characterId',
         element: <ComicsCharacter />,
       },
     ],
   },
- 
-  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);

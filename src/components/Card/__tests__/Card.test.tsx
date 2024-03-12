@@ -1,14 +1,33 @@
-import {render, screen} from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Card from '../Card'
-import { Character } from '../../../views/CharactersFavList/interfaces'
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Card from '../Card';
+import { ICardProp } from '../interfaces';
+//TODO: 
+const character: ICardProp = {
+  character: {
+    id:0,
+    name: 'test',
+    description: 'test',
+    modified: 'test',
+    thumbnail: {
+      path: '',
+      extension: '',
+    },
+    resourceURI: '',
+    comics: {
+      available: 0,
+    }
+    series: {
 
-const character: Character={
-id: 2
-}
+    },
+    stories: {}
+    evens: {}
+    urls:{}
+  }
+};
 test('loads and displays greeting', async () => {
   // ARRANGE
-  render(<Card character={character} />)
+  const {container} = render(<Card character={character} />);
+  expect(container).toMatchSnapshot('data');
 
-
-})
+});

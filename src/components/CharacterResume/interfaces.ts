@@ -1,5 +1,5 @@
-import { Character } from '../../views/CharactersFavList/interfaces'
+import { Character } from '../../views/CharactersFavList/interfaces';
 
 export interface ICharacterResumeProp {
-    character: Character
+  character: Character;
 }

@@ -1,10 +1,9 @@
-import  { Component, ErrorInfo } from "react";
-import type {Props, State} from './interfaces'
-
+import { Component, ErrorInfo } from 'react';
+import type { Props, State } from './interfaces';
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false
+    hasError: false,
   };
 
   public static getDerivedStateFromError(): State {
@@ -12,7 +11,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
+    console.error('Uncaught error:', error, errorInfo);
   }
 
   public render() {

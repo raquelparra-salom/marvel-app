@@ -1,6 +1,5 @@
-
 export interface IFilterProp {
-    value: string
-    count: number
-    handleChange: (value: string) => void;
+  value: string;
+  count: number;
+  handleChange: (value: string) => void;
 }
