@@ -88,3 +88,14 @@ export interface Url {
   type: string;
   url: string;
 }
+
+export interface IUseCharacterList {
+  states: {
+    charactersFav: Character[];
+    charactersFitered: Character[];
+    filterText: string;
+  },
+  actions: {
+    handleChangeInput: (text: string) => void;
+  }
+}

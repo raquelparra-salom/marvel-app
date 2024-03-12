@@ -1,6 +1,10 @@
+@import '../../variables.scss';
 
 .filter-wrapper{
-    padding: 16px 16px 24px 16px;
+    padding: 16px 48px 16px 49px;
+    @media (max-width: $mobile-width) {
+        padding: 16px 15px 16px 15px;
+    }
     input {
         border: none;
         border-bottom: 2px solid black;

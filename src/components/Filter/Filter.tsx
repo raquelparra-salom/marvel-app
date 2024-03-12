@@ -9,6 +9,7 @@ export const Filter = ({ value, count, handleChange }: IFilterProp) => {
         placeholder="Search a Character..."
         value={value}
         onChange={(e) => handleChange(e.target.value)}
+        minLength={3}
       />
       <div className="counter">{count} Results</div>
     </div>

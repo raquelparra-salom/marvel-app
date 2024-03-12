@@ -1,28 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { Character } from './interfaces';
-import Card from '../../components/Card/Card';
+import {Card} from '../../components/Card/';
 import './styled.scss';
-import Filter from '../../components/Filter/Filter';
-import { FavoriteContext } from '../../components/Root/Root';
+import {Filter} from '../../components/Filter/';
+import useCharacterFavList from './useCharacterFavList';
 
 export function CharactersFavList() {
 
-  //TODO: LLevar a un custom hook 
-  const { charactersFav } = useContext(FavoriteContext);
-  const [charactersFitered, setCharactersFiltered] = useState<Character[]>(charactersFav);
-  const [filterText, setFilterText] = useState<string>('');
-
-  useEffect(() => {
-    setCharactersFiltered(charactersFav);
-  }, [charactersFav]);
-
-  const handleChangeInput = (text: string) => {
-    setFilterText(text);
-    setCharactersFiltered(
-      charactersFav.filter((character) => character.name.toLocaleLowerCase().includes(text)),
-    );
-  };
-
+  const {states: { charactersFitered, charactersFav, filterText }, actions: { handleChangeInput }} =  useCharacterFavList();
+  
   return (
     <>
       <Filter handleChange={handleChangeInput} value={filterText} count={charactersFav.length} />

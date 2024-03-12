@@ -1,3 +1,5 @@
+import { Character } from '../CharacterList/interfaces';
+
 export interface ComicsCharacterResponse {
   code: number;
   status: string;
@@ -131,4 +133,13 @@ export interface Events {
     name: string;
   }[];
   returned: number;
+}
+
+export interface IUseComicsCharacter {
+  states: {
+    comics?: ComicsCharacterResponse;
+    character?: Character;
+    loading: boolean;
+  }
+
 }
