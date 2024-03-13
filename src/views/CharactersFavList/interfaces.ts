@@ -1,3 +1,5 @@
+import { Character, Data } from '../CharacterList/interfaces';
+
 export interface CharactersListResponse {
   code: number;
   status: string;
@@ -6,28 +8,6 @@ export interface CharactersListResponse {
   attributionHTML: string;
   etag: string;
   data: Data;
-}
-
-export interface Data {
-  offset: number;
-  limit: number;
-  total: number;
-  count: number;
-  results: Character[];
-}
-
-export interface Character {
-  id: number;
-  name: string;
-  description: string;
-  modified: string;
-  thumbnail: Thumbnail;
-  resourceURI: string;
-  comics: Comics;
-  series: Series;
-  stories: Stories;
-  events: Events;
-  urls: Url[];
 }
 
 export interface Thumbnail {
@@ -84,18 +64,13 @@ export interface Item4 {
   name: string;
 }
 
-export interface Url {
-  type: string;
-  url: string;
-}
-
 export interface IUseCharacterList {
   states: {
     charactersFav: Character[];
     charactersFitered: Character[];
     filterText: string;
-  },
+  };
   actions: {
     handleChangeInput: (text: string) => void;
-  }
+  };
 }

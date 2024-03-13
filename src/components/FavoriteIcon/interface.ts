@@ -1,10 +1,10 @@
 import { Character } from '../../views/CharactersFavList/interfaces';
 
 export interface IFavoriteIconProp {
-    isFavorite: boolean;
-    onToggle: () => void;
+  isFavorite: boolean;
+  onToggle: () => void;
 }
 
 export interface IFavoriteToggleProp {
-    character: Character;
+  character: Character;
 }

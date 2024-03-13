@@ -4,12 +4,12 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import './styled.scss';
 import { IFavoriteIconProp } from './interface';
 
-export const FavoriteIcon = ({ isFavorite, onToggle }:IFavoriteIconProp) => (
+export const FavoriteIcon = ({ isFavorite, onToggle }: IFavoriteIconProp) => (
   <div className="favorite-icon" onClick={onToggle}>
     {isFavorite ? (
-      <FontAwesomeIcon className='heart-selected' icon={faHeartSolid}  />
+      <FontAwesomeIcon className="heart-selected" icon={faHeartSolid} />
     ) : (
-      <FontAwesomeIcon className='heart-default' icon={faHeart}  />
+      <FontAwesomeIcon className="heart-default" icon={faHeart} />
     )}
   </div>
 );

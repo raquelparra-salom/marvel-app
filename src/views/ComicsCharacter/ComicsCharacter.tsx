@@ -1,18 +1,19 @@
 import './styled.scss';
-import {CharacterResume} from '../../components/CharacterResume/';
-import {ComicCard} from '../../components/ComicCard/';
+import { CharacterResume } from '../../components/CharacterResume/';
+import { ComicCard } from '../../components/ComicCard/';
 import useComicsCharacter from './UseComicsCharacter';
 import { ProgressBar } from '../../components/ProgressBar';
 
 export function ComicsCharacter() {
-  const {states: { character, comics, loading }} =  useComicsCharacter();
+  const {
+    states: { character, comics, loading },
+  } = useComicsCharacter();
 
   return (
     <>
       {loading && <ProgressBar />}
       {character && <CharacterResume character={character} />}
-      <div className='comics'>
-        <span className='subtitle'>Comics</span>
+      <div className="comics">
         <div className="container">
           <div className="frame">
             {comics?.data.results.map((comic, index) => (

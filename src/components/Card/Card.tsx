@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FavoriteToggle } from '../FavoriteIcon';
 
 export const Card = ({ character }: ICardProp) => {
-  
   return (
     <div className="card">
       <Link to={`/comics/${character.id}`}>
@@ -16,7 +15,6 @@ export const Card = ({ character }: ICardProp) => {
       <div className="info">
         <span className="title">{character.name}</span>
         <FavoriteToggle character={character} />
-
       </div>
     </div>
   );

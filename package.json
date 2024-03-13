@@ -11,7 +11,6 @@
     "preview": "vite preview",
     "test": "jest  --config=jest.json",
     "test:coverage": "jest --coverage "
-
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -29,6 +28,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.23.7",
     "@testing-library/react": "^14.2.1",
     "@types/crypto-js": "^4.2.2",

@@ -1,5 +1,5 @@
 import { ICharacterResumeProp } from './interfaces';
-import {FavoriteToggle} from '../FavoriteIcon/';
+import { FavoriteToggle } from '../FavoriteIcon/';
 import './styled.scss';
 
 export const CharacterResume = ({ character }: ICharacterResumeProp) => {

@@ -9,9 +9,10 @@ import useFavouriteContext from './useFavouriteContext';
 export const FavoriteContext = createContext<IFavoriteContext>({} as IFavoriteContext);
 
 export const Root = () => {
-  const {   
-     states: { charactersFav },
-    actions: { addFav, deleteFav }} = useFavouriteContext()
+  const {
+    states: { charactersFav },
+    actions: { addFav, deleteFav },
+  } = useFavouriteContext();
 
   return (
     <ErrorBoundary>

@@ -89,15 +89,14 @@ export interface Url {
   url: string;
 }
 
-
 export interface IUseCharacterList {
   states: {
     characters: Character[];
     loading: boolean;
     total: number;
     filterText: string;
-  },
+  };
   actions: {
     handleChangeInput: (text: string) => void;
-  }
+  };
 }

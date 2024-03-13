@@ -140,6 +140,5 @@ export interface IUseComicsCharacter {
     comics?: ComicsCharacterResponse;
     character?: Character;
     loading: boolean;
-  }
-
+  };
 }
