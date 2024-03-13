@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import './styled.scss'; // Importar el archivo de estilos Sass
 
 export const ProgressBar = () => {

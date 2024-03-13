@@ -6,7 +6,7 @@ import FavoriteIcon from './FavoriteIcon';
 
 export const FavoriteToggle = ({ character }: IFavoriteToggleProp) => {
   const { addFav, deleteFav, charactersFav } = useContext(FavoriteContext);
-  const [isFavorite, setIsFavorite] = useState(charactersFav.some((c) => c.id === character.id));
+  const [isFavorite, setIsFavorite] = useState(charactersFav?.some((c) => c.id === character.id));
   const toggleFavorite = () => {
     if (isFavorite) {
       deleteFav(character.id);

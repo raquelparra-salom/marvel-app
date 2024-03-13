@@ -1,4 +1,4 @@
-import { Character } from '../../views/CharactersFavList/interfaces';
+import { Character } from "../../views/CharacterList/interfaces";
 
 export interface IFavoriteIconProp {
   isFavorite: boolean;

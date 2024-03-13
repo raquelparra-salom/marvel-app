@@ -1,9 +1,15 @@
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
-// import Card from '../Card';
+import { MemoryRouter } from 'react-router-dom'; 
+import Card from '../Card';
+import { character1 } from './data';
 
-test('loads and displays greeting', async () => {
-  // ARRANGE
-  // const { container } = render(<Card />);
-  // expect(container).toMatchSnapshot('data');
+describe('Renders main page correctly', () => {
+  it('Should render the page correctly', async () => {
+    const { container } = render(
+      <MemoryRouter> 
+        <Card character={character1} />
+      </MemoryRouter>
+    );
+    expect(container).toMatchSnapshot('data');
+  });
 });

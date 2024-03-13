@@ -21,7 +21,7 @@ const useCharacterList = (): IUseCharacterList => {
       .then((response) => response.json())
       .then((response: CharactersListResponse) => {
         setCharacters(response.data.results);
-        setTotal(response.data.limit);
+        setTotal(response.data.count);
         setLoading(false);
       })
       .catch((err) => {
@@ -30,7 +30,7 @@ const useCharacterList = (): IUseCharacterList => {
         setLoading(false);
       });
   }, [filterText]);
-
+  
   const handleChangeInput = (text: string) => {
     setFilterText(text);
   };

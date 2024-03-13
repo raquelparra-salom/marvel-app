@@ -1,4 +1,4 @@
-import { Character } from './interfaces';
+import { Character } from '../interfaces';
 
 const Data: Character[] = [
   {

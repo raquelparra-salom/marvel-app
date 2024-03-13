@@ -19,7 +19,7 @@ export const Header = () => {
         <Link to={'fav'}>
           <img src={LogoFav} />
         </Link>
-        <div className="counterFav">{charactersFav.length}</div>
+        <div className="counterFav">{charactersFav?.length}</div>
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IUseFavouriteContext } from './interfaces';
-import { Character } from '../../views/CharactersFavList/interfaces';
+import { Character } from '../../views/CharacterList/interfaces';
 
 const useFavouriteContext = (): IUseFavouriteContext => {
   const [charactersFav, setCharactersFav] = useState<Character[]>([]);
