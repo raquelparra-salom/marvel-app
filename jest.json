@@ -1,16 +1,17 @@
 {
-    "rootDir": "..",
     "testEnvironment": "jsdom",
     "moduleFileExtensions": [
         "ts",
         "tsx",
-        "js",
-        "jsx"
+        "js"
     ],
     "moduleNameMapper": {
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/file-mapper.js",
-        "\\.(css|scss|less)$": "<rootDir>/test/style-mapper.js"
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/test/file-mapper.js",
+        "\\.(css|scss|less)$": "<rootDir>/config/test/style-mapper.js"
       },
+    "transform": {
+        "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
+     },
     "transformIgnorePatterns": [
         "/node_modules/"
     ],
