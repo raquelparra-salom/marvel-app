@@ -13,7 +13,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest  --config=jest.json",
-    "test:coverage": "jest --coverage "
+    "test:coverage": "jest --config=jest.json --coverage "
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
