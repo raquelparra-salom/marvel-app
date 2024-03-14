@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Root } from './components/Root/';
 import './index.scss';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import { CharactersFavList } from './views/CharactersFavList';
 import { CharactersList } from './views/CharacterList';
 import { ComicsCharacter } from './views/ComicsCharacter';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,

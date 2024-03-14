@@ -1,6 +1,6 @@
 # Marvel App
 
-Proyecto test de ejemplo utilizando las tecnologícas React, Typescript, Jest.
+Proyecto test de ejemplo utilizando las tecnologícas React, Sass, Typescript, Jest + Jest testing library.
 
 
 
@@ -40,3 +40,6 @@ Proyecto test de ejemplo utilizando las tecnologícas React, Typescript, Jest.
   npm run lint
   npm run lint:fix
   ```
+
+## Entorno test
+https://raquelparra-salom.github.io/marvel-app/
