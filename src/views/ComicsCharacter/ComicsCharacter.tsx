@@ -1,7 +1,7 @@
 import './styled.scss';
 import { CharacterResume } from '../../components/CharacterResume/';
 import { ComicCard } from '../../components/ComicCard/';
-import useComicsCharacter from './UseComicsCharacter';
+import useComicsCharacter from './useComicsCharacter';
 import { ProgressBar } from '../../components/ProgressBar';
 
 export function ComicsCharacter() {
