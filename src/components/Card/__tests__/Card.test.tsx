@@ -3,8 +3,8 @@ import { MemoryRouter } from 'react-router-dom';
 import Card from '../Card';
 import { character1 } from './data';
 
-describe('Renders main page correctly', () => {
-  it('Should render the page correctly', async () => {
+describe('Card component', () => {
+  it('Should render card component', async () => {
     const { container } = render(
       <MemoryRouter> 
         <Card character={character1} />
