@@ -13,8 +13,8 @@ export function CharactersFavList() {
     <>
       <Filter handleChange={handleChangeInput} value={filterText} count={charactersFav.length} />
       <div className="cards-container">
-        {charactersFitered.map((character, index) => (
-          <Card key={index} character={character} />
+        {charactersFitered.map((character) => (
+          <Card key={character.id} character={character} />
         ))}
       </div>
     </>

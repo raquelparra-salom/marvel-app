@@ -12,6 +12,9 @@
     .info {
       background-position: 0 0; 
     }
+    .heart-selected {
+      color: $white-color
+    } 
   }
 
   a {
@@ -35,7 +38,9 @@
     background-size: 100% 200%;
     background-position: 0 100%; 
     transition: background-position 0.3s; 
-    
+   
+  
+      
     .title {
       height: 16px;
       color: $white-color;

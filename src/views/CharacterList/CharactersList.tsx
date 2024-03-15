@@ -16,8 +16,8 @@ export function CharactersList() {
       <Filter handleChange={handleChangeInput} value={filterText} count={total} />
       {characters.length > 0 && (
         <div className="cards-container">
-          {characters.map((character, index) => (
-            <Card key={index} character={character} />
+          {characters.map((character) => (
+            <Card key={character.id} character={character} />
           ))}
         </div>
       )}
