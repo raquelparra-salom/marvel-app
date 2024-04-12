@@ -12,6 +12,7 @@ export function CharactersFavList() {
   return (
     <>
       <Filter handleChange={handleChangeInput} value={filterText} count={charactersFiltered.length} />
+      
       <div className="cards-container">
         {charactersFiltered.map((character) => (
           <Card key={character.id} character={character} />
