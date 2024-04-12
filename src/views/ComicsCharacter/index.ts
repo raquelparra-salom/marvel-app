@@ -1,0 +1,1 @@
+export { ComicsCharacter } from './ComicsCharacter';
