@@ -1,1 +1,0 @@
-export { CharacterResume } from './CharacterResume';
