@@ -1,8 +1,7 @@
-import { useState, useContext, useEffect, useMemo } from 'react';
+import { useState, useContext, useMemo } from 'react';
 import { IUseCharacterList } from './interfaces';
 import './styled.scss';
 import { FavoriteContext } from '../../components/Root/Root';
-import { Character } from '../CharacterList/interfaces';
 
 const useCharacterFavList = (): IUseCharacterList => {
   const { charactersFav } = useContext(FavoriteContext);
