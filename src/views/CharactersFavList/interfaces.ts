@@ -67,7 +67,7 @@ export interface Item4 {
 export interface IUseCharacterList {
   states: {
     charactersFav: Character[];
-    charactersFitered: Character[];
+    charactersFiltered: Character[];
     filterText: string;
   };
   actions: {

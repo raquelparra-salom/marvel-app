@@ -5,15 +5,15 @@ import useCharacterFavList from './useCharacterFavList';
 
 export function CharactersFavList() {
   const {
-    states: { charactersFitered, charactersFav, filterText },
+    states: { charactersFiltered, filterText },
     actions: { handleChangeInput },
   } = useCharacterFavList();
 
   return (
     <>
-      <Filter handleChange={handleChangeInput} value={filterText} count={charactersFav.length} />
+      <Filter handleChange={handleChangeInput} value={filterText} count={charactersFiltered.length} />
       <div className="cards-container">
-        {charactersFitered.map((character) => (
+        {charactersFiltered.map((character) => (
           <Card key={character.id} character={character} />
         ))}
       </div>
