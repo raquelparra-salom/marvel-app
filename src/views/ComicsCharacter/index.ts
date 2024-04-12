@@ -1,1 +1,0 @@
-export { ComicsCharacter } from './ComicsCharacter';
